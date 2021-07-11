@@ -1,9 +1,17 @@
-{% extends 'base.html' %}
+{% extends 'main/base.html' %}
 {% load static %}
 
 
 {% block content %}
 
-hei
+<div class="Row">
+    <div class="mb-4 px-2">
+        <a href="{% url 'crossfit:workout-add' %}" class="btn btn-primary rounded-0">Add workout</a>
+    </div>
+    <div class="mb-4 px-2">
+        <a href="#" class="btn btn-primary rounded-0">Empty</a>
+    </div>
+</div>
+
 
 {% endblock content %}
