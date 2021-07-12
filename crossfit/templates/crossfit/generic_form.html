@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block app_title %}
+    {{ block.super }}
+    Supplier - add
+{% endblock %}
+
+
+{% block content %}
+<div class="card-body">
+    <div class="col-lg-8">
+        {% crispy form %}
+    </div>
+</div>
+{% endblock content %}

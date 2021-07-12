@@ -15,7 +15,49 @@ class WorkoutForm(forms.ModelForm):
             Div(
                 "name",
                 "type",
-                "excercises",
+                css_class="col",
+            ),
+        )
+    )
+
+    class Meta:
+        model = Workout
+        fields = [
+            "name",
+            "type",
+        ]
+
+
+class ExcerciseDetailForm(forms.ModelForm):
+    helper = FormHelper()
+
+    helper.layout = Layout(
+        Row(
+            Div(
+                "excercise",
+                "magnitude",
+                "repetitions",
+                css_class="col",
+            ),
+        )
+    )
+
+    class Meta:
+        model = ExcerciseDetails
+        fields = [
+            "excercise",
+            "magnitude",
+            "repetitions",
+        ]
+
+
+class ExcerciseForm(forms.ModelForm):
+    helper = FormHelper()
+
+    helper.layout = Layout(
+        Row(
+            Div(
+                "name",
                 css_class="col",
             ),
         )
@@ -27,6 +69,4 @@ class WorkoutForm(forms.ModelForm):
         model = Workout
         fields = [
             "name",
-            "type",
-            "excercises",
         ]
